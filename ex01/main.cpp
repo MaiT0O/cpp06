@@ -18,6 +18,8 @@ int main() {
     else
         std::cout << "Error: pointers do not match." << std::endl;
 
+    std::cout << "originalPtr->number = " << originalPtr->_number << std::endl;
+    std::cout << "originalPtr->text = " << originalPtr->_text << std::endl;
     std::cout << "newPtr->number = " << newPtr->_number << std::endl;
     std::cout << "newPtr->text   = " << newPtr->_text << std::endl;
 

@@ -7,7 +7,8 @@ ScalarConvert::ScalarConvert()
 
 ScalarConvert& ScalarConvert::operator=(const ScalarConvert& src)
 {
-    (void)src;
+    if (this != &src)
+        (void)src;
     return (*this);
 }
 
