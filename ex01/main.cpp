@@ -9,7 +9,7 @@ int main() {
     Data* originalPtr = &data;
 
     uintptr_t raw = Serializer::serialize(originalPtr);
-    std::cout << "Serialized value : " << raw << std::endl;
+    std::cout << "Serialized adress value : " << raw << std::endl;
 
     Data* newPtr = Serializer::deserialize(raw);
 

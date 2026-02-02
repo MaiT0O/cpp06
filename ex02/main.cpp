@@ -6,7 +6,7 @@ Base *generate(void)
 {
     int random = rand() % 3;
 
-    std::cout << random << std::endl;
+    std::cout << "random number : " << random << std::endl;
     if (random == 0)
         return new A();
     else if (random == 1)

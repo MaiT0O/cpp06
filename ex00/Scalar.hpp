@@ -24,5 +24,5 @@ class ScalarConvert
 
     public :
 
-        static void convert(std::string const & literal);
+        static void convert(const std::string& literal);
 };

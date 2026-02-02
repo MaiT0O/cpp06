@@ -107,14 +107,14 @@ void convertFromChar(char c)
 void    convertFromInt(long i)
 {
     if (i < 0 || i > 127)
-        std::cout << "char: impossible" << std::endl;
+        std::cerr << "char: impossible" << std::endl;
     else if (!std::isprint(i))
-        std::cout << "char: Non displayable" << std::endl;
+        std::cerr << "char: Non displayable" << std::endl;
     else
         std::cout << "char: '" << static_cast<char>(i) << "'" << std::endl;
 
     if (i < MIN_INT || i > MAX_INT)
-        std::cout << "int: out of limits" << std::endl;
+        std::cerr << "int: out of limits" << std::endl;
     else
         std::cout << "int: " << static_cast<int>(i) << std::endl;
 
@@ -125,19 +125,19 @@ void    convertFromInt(long i)
 void    convertFromFloat(float f)
 {
     if (f < 0 || f > 127)
-        std::cout << "char: impossible" << std::endl;
+        std::cerr << "char: impossible" << std::endl;
     else if (!std::isprint(static_cast<int>(f)))
-        std::cout << "char: Non displayable" << std::endl;
+        std::cerr << "char: Non displayable" << std::endl;
     else
         std::cout << "char: '" << static_cast<char>(f) << "'" << std::endl;
     
     if (f < MIN_INT || f > MAX_INT)
-        std::cout << "int: out of limits" << std::endl;
+        std::cerr << "int: out of limits" << std::endl;
     else
         std::cout << "int: " << static_cast<int>(f) << std::endl;
 
     if (f < MIN_FLOAT || f > MAX_FLOAT)
-        std::cout << "float: out of limits" << std::endl;
+        std::cerr << "float: out of limits" << std::endl;
     else
         std::cout << "float: " << f << ".0f" << std::endl;
     std::cout << "double: " << static_cast<double>(f) << ".0" << std::endl;
@@ -146,24 +146,24 @@ void    convertFromFloat(float f)
 void    convertFromDouble(double d)
 {
     if (d < 0 || d > 127)
-        std::cout << "char: impossible" << std::endl;
+        std::cerr << "char: impossible" << std::endl;
     else if (!std::isprint(static_cast<int>(d)))
-        std::cout << "char: Non displayable" << std::endl;
+        std::cerr << "char: Non displayable" << std::endl;
     else
         std::cout << "char: '" << static_cast<char>(d) << "'" << std::endl;
     
     if (d < MIN_INT || d > MAX_INT)
-        std::cout << "int: out of limits" << std::endl;
+        std::cerr << "int: out of limits" << std::endl;
     else
         std::cout << "int: " << static_cast<int>(d) << std::endl;
     
     if (d < MIN_FLOAT || d > MAX_FLOAT)
-        std::cout << "float: out of limits" << std::endl;
+        std::cerr << "float: out of limits" << std::endl;
     else
         std::cout << "float: " << static_cast<float>(d) << ".0f" << std::endl;
     
     if (d < MIN_DOUBLE || d > MAX_DOUBLE)
-        std::cout << "double: out of limits" << std::endl;
+        std::cerr << "double: out of limits" << std::endl;
     else
         std::cout << "double: " << d << ".0" << std::endl;
 }
@@ -215,5 +215,5 @@ void ScalarConvert::convert(std::string const & literal)
     else if (isSpecialLiteral(literal))
         convertFromSpecialLiteral(literal);
     else
-        std::cout << "Error: Invalid literal format." << std::endl;
+        std::cerr << "Error: Invalid literal format." << std::endl;
 }
